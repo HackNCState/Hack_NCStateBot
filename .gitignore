@@ -2,3 +2,8 @@
 venv
 log.txt
 .idea
+.replit
+poetry.lock
+pyproject.toml
+replit.nix
+src/__pycache__
