@@ -8,3 +8,7 @@ https://hackncstatebot.masonhorne.repl.co
 Features:
 - Auto-assign roles based on invite link
 
+Get requirements:
+```
+pip install -r requirements.txt
+```
