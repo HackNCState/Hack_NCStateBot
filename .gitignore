@@ -1,6 +1,5 @@
 .env
 venv
-.venv
 log.txt
 .idea
 .vscode
