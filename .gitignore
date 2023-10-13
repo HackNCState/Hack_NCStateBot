@@ -7,5 +7,4 @@ log.txt
 poetry.lock
 pyproject.toml
 replit.nix
-src/__pycache__
-src/modules/__pycache__
+**/__pycache__
