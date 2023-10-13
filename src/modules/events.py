@@ -1,11 +1,12 @@
 import discord
 from discord.ext import commands
 
+from client import HackathonClient
+
 
 class Events(commands.Cog):
-    def __init__(self, bot: commands.Bot):
+    def __init__(self, bot: HackathonClient):
         self.bot = bot
-
 
     @commands.Cog.listener()
     async def on_ready(self):
