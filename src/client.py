@@ -20,7 +20,6 @@ class HackathonClient(commands.Bot):
         self.intents.members = True
         self.invites = {}
 
-
     async def setup_hook(self) -> None:
         await self.add_cog(Events(self))
         return await super().setup_hook()
