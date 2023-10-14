@@ -3,7 +3,7 @@ import dotenv
 import os
 from discord.ext import commands
 
-from src import client
+from src import HackathonClient
 from src import life_support
 from src.cogs import Events
 
@@ -23,5 +23,5 @@ if token is not None:
         Events,
     ]
 
-    bot = client.HackathonClient(cogs=cogs, intents=intents)
+    bot = HackathonClient(cogs=cogs, intents=intents)
     bot.run(token)
