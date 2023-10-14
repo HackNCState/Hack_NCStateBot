@@ -2,10 +2,8 @@ import datetime
 import discord
 from discord.ext import commands
 
-from src.modules import Events
-
 # Named the bot class HackathonClient instead of Client to avoid confusion with discord.Client
-# which is technically a superclass.
+# which is a superclass.
 class HackathonClient(commands.Bot):    
     code2role = {
         "y9JzshSpQr": 'Judge',
@@ -14,14 +12,21 @@ class HackathonClient(commands.Bot):
         "CAA9DrJhgs": 'Sponsor'
     }
 
-    def __init__(self):
-        self.command_prefix = '&'
-        self.intents = discord.Intents.default()
-        self.intents.members = True
+    def __init__(
+            self, 
+            command_prefix: str = "&", 
+            intents: discord.Intents = discord.Intents.default(),  
+            cogs: list[type[commands.Cog]] = []
+    ):
         self.invites = {}
+        self.setup_cogs = cogs
+
+        super().__init__(command_prefix, intents=intents)
+
 
     async def setup_hook(self) -> None:
-        await self.add_cog(Events(self))
+        for cog in self.setup_cogs:
+            await self.add_cog(cog(self))
         return await super().setup_hook()
 
     @staticmethod 

@@ -1,8 +1,7 @@
 import discord
 from discord.ext import commands
 
-from client import HackathonClient
-
+from src.client import HackathonClient
 
 class Events(commands.Cog):
     def __init__(self, bot: HackathonClient):
