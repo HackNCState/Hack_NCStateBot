@@ -2,8 +2,9 @@
 venv
 log.txt
 .idea
+.vscode
 .replit
 poetry.lock
 pyproject.toml
 replit.nix
-src/__pycache__
+**/__pycache__
