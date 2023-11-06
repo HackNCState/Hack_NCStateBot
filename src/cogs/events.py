@@ -30,7 +30,7 @@ class Events(commands.Cog):
                 if invite.code in self.bot.code2role:
                     try:
                         role_name = self.bot.code2role.get(str(invite.code))
-                        await member.add_roles(discord.utils.get(member.guild.roles, name=role_name))
+                        await member.add_roles(member.guild.get_role(role_name))
                     except Exception as e:
                         self.bot.log(f"Error add role to {member.name}.")
 
