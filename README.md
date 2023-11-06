@@ -1,9 +1,9 @@
 # Hack_NCState Discord Bot
 
-Bot Invite Link: https://discord.com/api/oauth2/authorize?client_id=1088585820421750914&permissions=8&scope=bot
+Bot Invite Link: https://discord.com/api/oauth2/authorize?client_id=1164700532443725885&permissions=8&scope=bot
 
 Bot Replit Link:
-https://hackncstatebot.masonhorne.repl.co
+https://hackncstatebot.hackncstate.repl.co
 
 Features:
 - Auto-assign roles based on invite link
