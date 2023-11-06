@@ -1,4 +1,5 @@
 import datetime
+import os
 import discord
 from discord.ext import commands
 
@@ -6,10 +7,10 @@ from discord.ext import commands
 # which is a superclass.
 class HackathonClient(commands.Bot):    
     code2role = {
-        "y9JzshSpQr": 'Judge',
-        "FEwQXxp7EG": 'Volunteer',
-        "vrYaFPRYUs": 'Mentor',
-        "CAA9DrJhgs": 'Sponsor'
+        os.getenv("INVITE_JUDGE"): 1168256795106611205,
+        os.getenv("INVITE_VOLUNTEER"): 1168256795106611203,
+        os.getenv("INVITE_MENTOR"): 1168256795106611204,
+        os.getenv("INVITE_SPONSOR"): 1168256795106611206,
     }
 
     def __init__(
